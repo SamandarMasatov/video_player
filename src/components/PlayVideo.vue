@@ -2,6 +2,7 @@
   <div class="video_wrapper">
     <video
       class="video"
+      id="checkVideo"
       :src="require(`../assets/video/${pathName}/${video}`)"
       muted
       autoplay
@@ -48,5 +49,21 @@
 <script>
 export default {
   props: ["video", "pathName"],
+  data(){
+    return{
+      time: 0
+    }
+  },
+  watch: {
+    time(value){
+      console.log(value);
+    }
+  },
+  mounted(){
+    let video = document.getElementById('checkVideo');
+    video.addEventListener('ended', function (){
+      this.time = 1;
+    })
+  },  
 };
 </script>

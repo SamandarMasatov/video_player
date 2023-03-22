@@ -1,7 +1,7 @@
 <template>
 
   <div class="kv">
-    <div class="right">
+    <div class="right" :class="interval == 3 ? 'home_animation' : ''">
       <div class="box-r">
         <img
           :src="require('../assets/images/timano_pechara.svg')"
@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="top"></div>
-    <div class="left">
+    <div class="left" :class="interval == 1 ? 'home_animation' : ''">
       <div class="box-l">
         <img
           :src="require('../assets/images/zapladnaya_sibir.svg')"
@@ -29,7 +29,7 @@
         </router-link>
       </div>
     </div>
-    <div class="bottom">
+    <div class="bottom" :class="interval == 2 ? 'home_animation' : ''">
       <div class="b-box">
         <img
           :src="require('../assets/images/baku_santpeterburg.svg')"
@@ -48,3 +48,22 @@
     </span>
   </div>
 </template>
+ 
+<script>
+export default {
+  name: "HomePage",
+  data(){
+    return {
+      interval: 1,
+    }
+  },
+  mounted(){
+    setInterval(() => {
+      if(this.interval == 3){
+        this.interval = 0;
+      }
+      this.interval++;
+    }, 3600);
+  }
+}
+</script>
