@@ -1,6 +1,7 @@
 <template>
   <div class="video_wrapper">
     <video
+      id="vid"
       class="video"
       :src="require(`../assets/video/${pathName}/${video}`)"
       muted
@@ -42,11 +43,19 @@
         </svg>
       </div>
     </router-link>
+    <!-- {{ vid }} -->
   </div>
 </template>
 
 <script>
 export default {
   props: ["video", "pathName"],
+  data() {
+    return {};
+  },
+  mounted() {
+    const video = document.getElementById("vid");
+    console.log(video.endTime);
+  },
 };
 </script>
