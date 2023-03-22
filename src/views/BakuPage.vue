@@ -2,10 +2,15 @@
   <div class="video_page">
     <CheckVideo
       :videos="videos"
+      :index="index"
       :pathName="pathName"
       @selectVideo="changeVideo"
     />
-    <PlayVideo :video="videos[index]" :pathName="pathName" />
+    <PlayVideo
+      :video="videos[index]"
+      :pathName="pathName"
+      @nextVideo="nextVideo"
+    />
   </div>
 </template>
 
@@ -28,6 +33,13 @@ export default {
     changeVideo(index) {
       console.log(this.videos[index]);
       this.index = index;
+    },
+    nextVideo() {
+      if (this.index != this.videos.length - 1) {
+        this.index++;
+      } else {
+        this.index = 0;
+      }
     },
   },
 };

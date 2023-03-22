@@ -22,7 +22,7 @@
   border: 1px solid;
   opacity: 0.5;
 }
-.checkbox_active{
+.checkbox_active {
   opacity: 1;
 }
 .video_checkbox {
@@ -35,15 +35,15 @@
 }
 /* Video player */
 .video_wrapper {
-  width: 542px;
-  height: 600px;
+  width: 700px;
+  height: 761px;
   position: relative;
   overflow: hidden;
-  border-radius: 26px;
+  border-radius: 35px;
 }
 .video {
-  width: 1007px;
-  height: 628px;
+  width: 1344px;
+  height: 960px;
   position: absolute;
   top: 50%;
   left: 50%;
