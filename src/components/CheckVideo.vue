@@ -5,6 +5,7 @@
       v-for="(item, i) of videos"
       :key="i"
       @click="$emit('selectVideo', i)"
+      :class="index == i ? 'checkbox_active':''"
     >
       <video class="video_checkbox" muted preload="metadata">
         <source
@@ -18,6 +19,6 @@
 
 <script>
 export default {
-  props: ["videos", "pathName"],
+  props: ["videos", 'index', "pathName"],
 };
 </script>

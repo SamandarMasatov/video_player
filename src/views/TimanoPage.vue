@@ -2,6 +2,7 @@
   <div class="video_page">
     <CheckVideo
       :videos="videos"
+      :index="index"
       :pathName="pathName"
       @selectVideo="changeVideo"
     />
