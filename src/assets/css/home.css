@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Open Sans Bold", sans-serif;
-  src: url("../fonts/open-sans-bold_[allfont.ru].ttf");
+  font-family: "Open Sans", sans-serif;
+  src: url("../fonts/ofont.ru_Open\ Sans.ttf");
 }
 
 * {
@@ -72,6 +72,9 @@ body {
   font-size: 18px;
   margin-bottom: 10px;
   padding: 0 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .kv .circle p {
@@ -79,6 +82,9 @@ body {
   font-weight: 800;
   font-size: 14px;
   padding: 0 2px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .kv .right {
@@ -126,8 +132,17 @@ body {
   text-decoration: none;
   text-align: center;
   padding: 8px;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
+  font-weight: 700;
   left: 0;
+  animation: scala 2s infinite alternate-reverse;
+  -webkit-animation: scala 2s infinite alternate-reverse;
+}
+
+.kv .right span {
+  font-size: 13px;
+  font-weight: 400;
 }
 
 .kv .left {
@@ -164,7 +179,7 @@ body {
 }
 
 .kv .left a {
-  width: 230px;
+  width: 250px;
   right: 20px;
   position: absolute;
   z-index: 10;
@@ -174,7 +189,14 @@ body {
   text-decoration: none;
   text-align: center;
   padding: 8px;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
+  font-weight: 700;
+}
+
+.kv .left span {
+  font-size: 13px;
+  font-weight: 400;
 }
 
 .kv .top {
@@ -237,7 +259,14 @@ body {
   text-decoration: none;
   text-align: center;
   padding: 8px;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
+  font-weight: 700;
+}
+
+.kv .bottom .b-box span {
+  font-size: 13px;
+  font-weight: 400;
 }
 
 @keyframes scala {
