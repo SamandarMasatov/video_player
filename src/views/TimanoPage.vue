@@ -5,7 +5,7 @@
       :pathName="pathName"
       @selectVideo="changeVideo"
     />
-    <PlayVideo :video="videos[index]" :pathName="pathName" />
+    <PlayVideo :video="videos[index]" :pathName="pathName" @nextVideo="nextVideo" />
   </div>
 </template>
 
@@ -29,6 +29,13 @@ export default {
       console.log(this.videos[index]);
       this.index = index;
     },
+    nextVideo(){
+      if(this.index != this.videos.length - 1){
+        this.index++;
+      }else{
+        this.index = 0;
+      }
+    }
   },
 };
 </script>

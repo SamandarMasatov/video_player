@@ -1,8 +1,8 @@
 <template>
   <div class="video_wrapper">
     <video
-      id="vid"
       class="video"
+      id="checkVideo"
       :src="require(`../assets/video/${pathName}/${video}`)"
       muted
       autoplay
@@ -43,19 +43,35 @@
         </svg>
       </div>
     </router-link>
-    <!-- {{ vid }} -->
+    <button class="hide_button" @click="changeVidoe()" style="display: none;"></button>
   </div>
 </template>
 
 <script>
 export default {
   props: ["video", "pathName"],
-  data() {
-    return {};
+  emits: ["nextVideo"],
+  data(){
+    return{
+      time: 0
+    }
   },
-  mounted() {
-    const video = document.getElementById("vid");
-    console.log(video.endTime);
+  watch: {
+    'time'(value){
+      console.log(value);
+    }
+  },
+  methods: {
+    changeVidoe(){
+      this.$emit('nextVideo');
+    }
+  },
+  mounted(){
+    let video = document.getElementById('checkVideo');
+    let btn = document.querySelector('.hide_button');
+    video.addEventListener('ended', function (){
+      btn.click();
+    });
   },
 };
 </script>

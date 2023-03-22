@@ -127,15 +127,20 @@ body {
   top: 85%;
   position: absolute;
   z-index: 10;
-  color: white;
-  background: #383838;
   text-decoration: none;
   text-align: center;
-  padding: 8px;
+  padding: 24px 8px 19px;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
   left: 0;
+  border-radius: 20px;
+  color: white;
+  background: #383838d7;
+}
+
+.kv .home_animation .btn {
+  background: #383838;
   animation: scala 2s infinite alternate-reverse;
   -webkit-animation: scala 2s infinite alternate-reverse;
 }
@@ -154,6 +159,7 @@ body {
   align-items: center;
   background: url("@/assets/images/karta_fon.png");
   background-size: cover;
+  background-position: right;
   -webkit-clip-path: polygon(83% 100%, 100% 100%, 100% 47%, 100% 13%, 51% 49%);
   clip-path: polygon(83% 100%, 100% 100%, 100% 47%, 100% 13%, 51% 49%);
   filter: brightness(60%);
@@ -188,10 +194,12 @@ body {
   background: #383838;
   text-decoration: none;
   text-align: center;
-  padding: 8px;
+  padding: 24px 8px 19px;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
+  opacity: 0.7;
+  border-radius: 20px;
 }
 
 .kv .left span {
@@ -207,6 +215,8 @@ body {
   height: 100%;
   background: url("@/assets/images/karta_fon.png");
   background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
   -webkit-clip-path: polygon(0 10%, 50% 47%, 100% 10%, 100% 0, 0 0);
   clip-path: polygon(0 10%, 50% 47%, 100% 10%, 100% 0, 0 0);
   border-radius: 50px;
@@ -225,6 +235,7 @@ body {
   height: 100%;
   background: url("@/assets/images/karta_fon.png");
   background-size: cover;
+  background-position: bottom;
   -webkit-clip-path: polygon(43% 57%, 22% 100%, 80% 100%, 50% 50%);
   clip-path: polygon(43% 57%, 22% 100%, 80% 100%, 50% 50%);
   filter: brightness(60%);
@@ -234,6 +245,11 @@ body {
   -moz-transition: 0.7s ease-in;
   -ms-transition: 0.7s ease-in;
   -o-transition: 0.7s ease-in;
+}
+
+.kv .home_animation {
+  filter: brightness(100%);
+  -webkit-filter: brightness(100%);
 }
 
 .kv .bottom .b-box {
@@ -252,22 +268,25 @@ body {
 .kv .bottom .b-box .btn {
   width: 260px;
   position: absolute;
-  margin-top: -20px;
+  margin-top: -30px;
   left: 0;
   color: white;
   background: #383838;
   text-decoration: none;
   text-align: center;
-  padding: 8px;
+  padding: 24px 8px 19px;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
+  opacity: 0.7;
+  border-radius: 20px;
 }
 
 .kv .bottom .b-box span {
   font-size: 13px;
   font-weight: 400;
 }
+
 
 @keyframes scala {
   0% {
