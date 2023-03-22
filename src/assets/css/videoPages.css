@@ -12,18 +12,18 @@
   margin: 10px 0;
 }
 .checkbox {
-  width: 58px;
-  height: 60px;
+  width: 64px;
+  height: 70px;
   margin: 3px;
-  border-radius: 5px;
+  border-radius: 9px;
   cursor: pointer;
   overflow: hidden;
   position: relative;
   border: 1px solid;
 }
 .video_checkbox {
-  width: 107px;
-  height: 60px;
+  width: 117px;
+  height: 70px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -31,15 +31,15 @@
 }
 /* Video player */
 .video_wrapper {
-  width: 488px;
-  height: 500px;
+  width: 542px;
+  height: 600px;
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 26px;
 }
 .video {
-  width: 907px;
-  height: 528px;
+  width: 1007px;
+  height: 628px;
   position: absolute;
   top: 50%;
   left: 50%;
