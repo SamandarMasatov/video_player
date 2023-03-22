@@ -43,27 +43,35 @@
         </svg>
       </div>
     </router-link>
+    <button class="hide_button" @click="changeVidoe()" style="display: none;"></button>
   </div>
 </template>
 
 <script>
 export default {
   props: ["video", "pathName"],
+  emits: ["nextVideo"],
   data(){
     return{
       time: 0
     }
   },
   watch: {
-    time(value){
+    'time'(value){
       console.log(value);
+    }
+  },
+  methods: {
+    changeVidoe(){
+      this.$emit('nextVideo');
     }
   },
   mounted(){
     let video = document.getElementById('checkVideo');
+    let btn = document.querySelector('.hide_button');
     video.addEventListener('ended', function (){
-      this.time = 1;
-    })
-  },  
+      btn.click();
+    });
+  },
 };
 </script>

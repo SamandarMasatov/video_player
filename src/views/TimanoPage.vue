@@ -30,7 +30,11 @@ export default {
       this.index = index;
     },
     nextVideo(){
-      this.index++;
+      if(this.index != this.videos.length - 1){
+        this.index++;
+      }else{
+        this.index = 0;
+      }
     }
   },
 };
