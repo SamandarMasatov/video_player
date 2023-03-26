@@ -32,7 +32,6 @@ export default {
   },
   methods: {
     changeVideo(index) {
-      // console.log(this.videos[index]);
       this.index = index;
     },
     nextVideo() {
