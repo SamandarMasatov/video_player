@@ -60,11 +60,11 @@
 export default {
   props: ["videos", "index", "pathName"],
   emits: ["nextVideo"],
-  data() {
-    return {
-      time: 0,
-    };
-  },
+  // data() {
+  //   return {
+  //     time: 0,
+  //   };
+  // },
   // watch: {
   //   time(value) {
   //     console.log(value);
@@ -74,13 +74,16 @@ export default {
     changeVidoe() {
       this.$emit("nextVideo");
     },
+    endVideo() {
+      let video = document.getElementById("checkVideo");
+      let btn = document.querySelector(".hide_button");
+      video.addEventListener("ended", function () {
+        btn.click();
+      });
+    },
   },
   mounted() {
-    let video = document.getElementById("checkVideo");
-    let btn = document.querySelector(".hide_button");
-    video.addEventListener("ended", function () {
-      btn.click();
-    });
+    this.endVideo();
   },
 };
 </script>
