@@ -1,9 +1,14 @@
 <template>
-  <div class="video_wrapper">
+  <div
+    class="video_wrapper"
+    v-for="(item, i) of videos"
+    :key="i"
+    :class="index == i ? 'd-block' : ' '"
+  >
     <video
       class="video"
       id="checkVideo"
-      :src="require(`../assets/video/${pathName}/${video}`)"
+      :src="require(`../assets/video/${pathName}/${item}`)"
       muted
       autoplay
       type="video/mp4"
@@ -11,8 +16,8 @@
     <router-link to="/">
       <div class="home_icon_wrapper">
         <svg
-          width="25"
-          height="25"
+          width="80"
+          height="80"
           viewBox="0 0 307 296"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -43,33 +48,37 @@
         </svg>
       </div>
     </router-link>
-    <button class="hide_button" @click="changeVidoe()" style="display: none;"></button>
+    <button
+      class="hide_button"
+      @click="changeVidoe()"
+      style="display: none"
+    ></button>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["video", "pathName"],
+  props: ["videos", "index", "pathName"],
   emits: ["nextVideo"],
-  data(){
-    return{
-      time: 0
-    }
+  data() {
+    return {
+      time: 0,
+    };
   },
-  watch: {
-    'time'(value){
-      console.log(value);
-    }
-  },
+  // watch: {
+  //   time(value) {
+  //     console.log(value);
+  //   },
+  // },
   methods: {
-    changeVidoe(){
-      this.$emit('nextVideo');
-    }
+    changeVidoe() {
+      this.$emit("nextVideo");
+    },
   },
-  mounted(){
-    let video = document.getElementById('checkVideo');
-    let btn = document.querySelector('.hide_button');
-    video.addEventListener('ended', function (){
+  mounted() {
+    let video = document.getElementById("checkVideo");
+    let btn = document.querySelector(".hide_button");
+    video.addEventListener("ended", function () {
       btn.click();
     });
   },

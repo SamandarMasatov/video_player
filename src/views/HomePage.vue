@@ -1,6 +1,6 @@
 <template>
-
   <div class="kv">
+    <div class="right_wrapper"></div>
     <div class="right" :class="interval == 3 ? 'home_animation' : ''">
       <div class="box-r">
         <img
@@ -48,22 +48,22 @@
     </span>
   </div>
 </template>
- 
+
 <script>
 export default {
   name: "HomePage",
-  data(){
+  data() {
     return {
       interval: 1,
-    }
+    };
   },
-  mounted(){
+  mounted() {
     setInterval(() => {
-      if(this.interval == 3){
+      if (this.interval == 3) {
         this.interval = 0;
       }
       this.interval++;
     }, 3600);
-  }
-}
+  },
+};
 </script>
