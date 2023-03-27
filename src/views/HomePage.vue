@@ -1,23 +1,35 @@
 <template>
   <div class="kv">
     <div class="right_wrapper"></div>
-    <div class="right" :class="interval == 3 ? 'home_animation' : ''">
-      <div class="box-r">
-        <img
-          :src="require('../assets/images/timano_pechara.svg')"
-          alt="rink"
-          class="rink"
-        />
+    <!-- Timano -->
+    <router-link
+      to="/timano"
+      class="right"
+      :class="interval == 3 ? 'home_animation' : ''"
+    >
+      <router-link to="/timano">
+        <div class="box-r">
+          <img
+            :src="require('../assets/images/timano_pechara.svg')"
+            alt="rink"
+            class="rink"
+          />
 
-        <router-link class="btn" to="/timano">
-          ТИМАНО-ПЕЧОРА <br />
-          МИРОВЫЕ РЫНКИ <span>(XXI век)</span>
-        </router-link>
-      </div>
-    </div>
+          <router-link class="btn" to="/timano">
+            ТИМАНО-ПЕЧОРА <br />
+            МИРОВЫЕ РЫНКИ <span>(XXI век)</span>
+          </router-link>
+        </div>
+      </router-link>
+    </router-link>
     <div class="top"></div>
-    <div class="left" :class="interval == 1 ? 'home_animation' : ''">
-      <div class="box-l">
+    <!-- Sibir -->
+    <router-link
+      to="/sibir"
+      class="left"
+      :class="interval == 1 ? 'home_animation' : ''"
+    >
+      <router-link to="/sibir" class="box-l">
         <img
           :src="require('../assets/images/zapladnaya_sibir.svg')"
           alt="rink"
@@ -27,10 +39,15 @@
           ЗАПАДНАЯ СИБИРЬ - МОСКВА <br />
           <span>(вторая половина XX века)</span>
         </router-link>
-      </div>
-    </div>
-    <div class="bottom" :class="interval == 2 ? 'home_animation' : ''">
-      <div class="b-box">
+      </router-link>
+    </router-link>
+    <!-- baku -->
+    <router-link
+      to="/baku"
+      class="bottom"
+      :class="interval == 2 ? 'home_animation' : ''"
+    >
+      <router-link to="/baku" class="b-box">
         <img
           :src="require('../assets/images/baku_santpeterburg.svg')"
           alt="rink"
@@ -40,10 +57,13 @@
           БАКУ - САНКТ-ПЕТЕРБУРГ <br />
           <span> (конец XIX века - начало XX века)</span>
         </router-link>
-      </div>
-    </div>
+      </router-link>
+    </router-link>
     <span class="circle">
-      <h3>КАК ПРОЛЕГАЛ ПУТЬ НЕФТИ В РАЗНЫЕ ЭПОХИ?</h3>
+      <h3>
+        КАК ПРОЛЕГАЛ ПУТЬ <br />
+        НЕФТИ В РАЗНЫЕ ЭПОХИ?
+      </h3>
       <p>Чтобы узнать, выберите маршрут и коснитесь его названия</p>
     </span>
   </div>

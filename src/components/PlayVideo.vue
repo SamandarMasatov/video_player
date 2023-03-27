@@ -3,14 +3,14 @@
     class="video_wrapper"
     v-for="(item, i) of videos"
     :key="i"
-    :class="index == i ? 'd-block' : ' '"
+    :class="index == i ? 'd-block video_active' : ' '"
   >
     <video
       class="video"
       id="checkVideo"
       :src="require(`../assets/video/${pathName}/${item}`)"
-      muted
       autoplay
+      muted
       type="video/mp4"
     ></video>
     <router-link to="/">
@@ -60,18 +60,12 @@
 export default {
   props: ["videos", "index", "pathName"],
   emits: ["nextVideo"],
-  // data() {
-  //   return {
-  //     time: 0,
-  //   };
-  // },
-  // watch: {
-  //   time(value) {
-  //     console.log(value);
-  //   },
-  // },
   methods: {
     changeVidoe() {
+      const list = document.querySelectorAll(".video_wrapper video");
+      list.forEach((a) => {
+        a.currentTime = 0;
+      });
       this.$emit("nextVideo");
     },
     endVideo() {
@@ -83,7 +77,13 @@ export default {
     },
   },
   mounted() {
-    this.endVideo();
+    let videos = document.querySelectorAll(".video_wrapper video");
+    let btn = document.querySelector(".hide_button");
+    videos.forEach((a) => {
+      a.addEventListener("ended", function () {
+        btn.click();
+      });
+    });
   },
 };
 </script>

@@ -6,7 +6,12 @@
       :index="index"
       @selectVideo="changeVideo"
     />
-    <PlayVideo :video="videos[index]" :pathName="pathName"  @nextVideo="nextVideo" />
+    <PlayVideo
+      :videos="videos"
+      :index="index"
+      :pathName="pathName"
+      @nextVideo="nextVideo"
+    />
   </div>
 </template>
 

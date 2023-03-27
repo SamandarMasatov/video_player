@@ -5,7 +5,7 @@
       class="checkbox"
       v-for="(item, i) of videos"
       :key="i"
-      @click="$emit('selectVideo', i)"
+      @click="selectVideo(i)"
       :checked="index == i ? true : false"
     />
   </div>
@@ -14,5 +14,14 @@
 <script>
 export default {
   props: ["videos", "index", "pathName"],
+  methods:{
+    selectVideo(i){
+      const list = document.querySelectorAll('.video_wrapper video');
+      list.forEach(a => {
+        a.currentTime = 0;
+      })
+      this.$emit('selectVideo', i)
+    }
+  }
 };
 </script>

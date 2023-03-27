@@ -7,7 +7,8 @@
       @selectVideo="changeVideo"
     />
     <PlayVideo
-      :video="videos[index]"
+      :videos="videos"
+      :index="index"
       :pathName="pathName"
       @nextVideo="nextVideo"
     />

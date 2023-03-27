@@ -32,13 +32,11 @@ export default {
   },
   methods: {
     changeVideo(index) {
-      // console.log(this.videos[index]);
       this.index = index;
     },
     nextVideo() {
       if (this.index != this.videos.length - 1) {
         this.index++;
-        console.log(this.index);
       } else {
         this.index = 0;
       }
