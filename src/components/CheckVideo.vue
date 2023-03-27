@@ -19,6 +19,9 @@
 <script>
 export default {
   props: ["videos", "index", "pathName"],
+  data() {
+    return {};
+  },
   methods: {
     selectVideo(i) {
       const list = document.querySelectorAll(".video_wrapper video");
