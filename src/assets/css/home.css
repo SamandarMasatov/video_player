@@ -134,7 +134,7 @@ body {
 .kv .right .btn {
   width: 581px;
   height: 136px;
-  top: 85%;
+  top: 81%;
   position: absolute;
   z-index: 10;
   text-decoration: none;
@@ -147,6 +147,7 @@ body {
   border-radius: 20px;
   color: white;
   background: #383838d7;
+  margin-top: 43px;
 }
 
 .kv .home_animation .btn {
@@ -211,7 +212,7 @@ body {
   height: 136px;
   right: 20px;
   z-index: 10;
-  top: 35%;
+  top: 34.5%;
   color: white;
   background: #383838d7;
   text-decoration: none;
@@ -222,6 +223,7 @@ body {
   font-weight: 700;
   opacity: 0.7;
   border-radius: 20px;
+  margin-top: 43px;
 }
 
 .kv .left span {
