@@ -8,20 +8,25 @@
       @click="selectVideo(i)"
       :checked="index == i ? true : false"
     />
+    <div class="checkbox_burger toggle">
+      <span class="line1"></span>
+      <span class="line2"></span>
+      <span class="line3"></span>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   props: ["videos", "index", "pathName"],
-  methods:{
-    selectVideo(i){
-      const list = document.querySelectorAll('.video_wrapper video');
-      list.forEach(a => {
+  methods: {
+    selectVideo(i) {
+      const list = document.querySelectorAll(".video_wrapper video");
+      list.forEach((a) => {
         a.currentTime = 0;
-      })
-      this.$emit('selectVideo', i)
-    }
-  }
+      });
+      this.$emit("selectVideo", i);
+    },
+  },
 };
 </script>

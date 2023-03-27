@@ -11,12 +11,6 @@
   src: url("../fonts/open-sans_[allfont.ru].ttf");
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   display: flex;
   align-items: center;
