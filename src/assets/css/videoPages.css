@@ -8,9 +8,12 @@
 
 /*=================== Checkbox video============== */
 .checkbox_wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   margin: 10px 0;
+  height: 145px;
+  min-width: 1000px;
 }
 .checkbox {
   width: 132px;
@@ -22,17 +25,23 @@
   position: relative;
   border: 2px solid black;
   opacity: 0.5;
+  display: none;
 }
 .checkbox_active {
   opacity: 1;
 }
 /* Checkbox burger */
 .checkbox_burger {
-  width: 119px;
+  position: absolute;
+  top: 30px;
+  right: -150px;
+  width: 110px;
   margin-left: 40px;
   cursor: pointer;
+  z-index: 10;
 }
 .checkbox_burger span {
+  transition: all 0.2s;
   display: block;
   width: 100%;
   height: 16px;

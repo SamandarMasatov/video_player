@@ -3,6 +3,7 @@
     <input
       type="checkbox"
       class="checkbox"
+      :class="{ 'd-block': active }"
       v-for="(item, i) of videos"
       :key="i"
       @click="selectVideo(i)"
