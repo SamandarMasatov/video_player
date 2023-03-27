@@ -8,7 +8,11 @@
       @click="selectVideo(i)"
       :checked="index == i ? true : false"
     />
-    <div class="checkbox_burger toggle">
+    <div
+      @click="active = !active"
+      class="checkbox_burger"
+      :class="{ toggle: active }"
+    >
       <span class="line1"></span>
       <span class="line2"></span>
       <span class="line3"></span>
@@ -20,7 +24,9 @@
 export default {
   props: ["videos", "index", "pathName"],
   data() {
-    return {};
+    return {
+      active: true,
+    };
   },
   methods: {
     selectVideo(i) {
