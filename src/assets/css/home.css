@@ -214,7 +214,7 @@ body {
   z-index: 10;
   top: 34.5%;
   color: white;
-  background: #383838d7;
+  background: #000000d7;
   text-decoration: none;
   text-align: center;
   padding: 24px 8px 19px;
@@ -293,10 +293,10 @@ body {
   width: 581px;
   height: 136px;
   position: absolute;
-  margin-top: -30px;
+  margin-top: -43px;
   left: 0;
   color: white;
-  background: #383838d7;
+  background: #000000d7;
   text-decoration: none;
   text-align: center;
   padding: 24px 8px 19px;
